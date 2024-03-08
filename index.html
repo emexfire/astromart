@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Astromart Website Clone | CodingNigeria</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+</head>
+<body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-logo">
+          <a href="#"><img src="images/Astromart_logo-removebg-preview.png" alt="logo"></a>
+        </div>
+        <div class="address">
+          <a href="#" class="deliver">Deliver</a>
+          <div class="map-icon">
+            <span class="material-symbols-outlined">location_on</span>
+            <a href="#" class="location">Nigeria</a>
+          </div>
+        </div>
+
+        <div class="nav-search">
+          <select class="select-search" id="searchCategory">
+            <option value="all">All</option>
+            <option value="allCategories">All Categories</option>
+            <option value="astromartDevices">Astromart Devices</option>
+          </select>
+          <input type="text" placeholder="Search Astromart" class="search-input" id="searchInput">
+          <div class="search-icon">
+            <span class="material-symbols-outlined" id="searchBtn">search</span>
+          </div>
+        </div>
+
+        <div class="sign-in">
+         <a href="#"> <p>Hello, sign in</p>
+          <span>Account &amp; Lists</span></a>
+        </div>
+
+        <div class="returns">
+          <a href="#"><p>Returns</p>
+            <span>&amp; Orders</span></a>
+        </div>
+
+        <div class="cart">
+          <a href="#">
+            <span class="material-symbols-outlined cart-icon">shopping_cart</span>
+            </a>
+            <p>Cart</p>
+        </div>
+      </nav>
+      
+      <div class="banner">
+        <div class="banner-content">
+          <div class="panel">
+            <span class="material-symbols-outlined" id="menuBtn">menu</span>
+            <a href="#">All</a>
+          </div>
+  
+          <ul class="links" id="navLinks">
+            <li><a href="#">Today's Deals</a></li>
+            <li><a href="#">Customer Service</a></li>
+            <li><a href="#">Registry</a></li>
+            <li><a href="#">Gift Cards</a></li>
+            <li><a href="#">Sell</a></li>
+          </ul>
+          <div class="deals">
+            <a href="#">Shop deals in Electronics</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero-section"></section>
+
+    <section class="shop-section">
+      <div class="shop-images">
+        <div class="shop-link">
+          <h3>Shop Laptops &amp; Tables</h3>
+          <img src="images/laptops.jpg" alt="card">
+          <a href="#">Shop now</a>
+        </div>
+        <div class="shop-link">
+          <h3>Shop Smartwatches</h3>
+          <img src="images/smartwatches.jpg" alt="card">
+          <a href="#">Shop now</a>
+        </div>
+        <div class="shop-link">
+          <h3>Create with Strip Lights</h3>
+          <img src="images/strip lights.webp" alt="card">
+          <a href="#">Shop now</a>
+        </div>
+        <div class="shop-link">
+          <h3>Home Refresh Ideas</h3>
+          <img src="images/home refresh.jpg" alt="card">
+          <a href="#">Shop now</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <a href="#" class="footer-title">
+        Back to top
+      </a>
+      <div class="footer-items">
+        <ul>
+          <h3>Get to Know Us</h3>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press Release</a></li>
+          <li><a href="#">Astromart Science</a></li>
+        </ul>
+        <ul>
+          <h3>Connect with Us</h3>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+        <ul>
+          <h3>Make Money with Us</h3>
+          <li><a href="#">Sell on Astromart</a></li>
+          <li><a href="#">Sell under Astromart Accelerator</a></li>
+          <li><a href="#">Protect and Build Your Brand</a></li>
+          <li><a href="#">Astromart Global Selling</a></li>
+          <li><a href="#">Become an Affiliate</a></li>
+          <li><a href="#">Fulfillment by Asromart</a></li>
+          <li><a href="#">Advertise Your Products</a></li>
+          <li><a href="#">Astromart Pay on Merchants</a></li>
+        </ul>
+        <ul>
+          <h3>Let Us Help You</h3>
+          <li><a href="#">COVID-19 and Astromart</a></li>
+          <li><a href="#">Your Account</a></li>
+          <li><a href="#">Return Centre</a></li>
+          <li><a href="#">100% Purchase Protection</a></li>
+          <li><a href="#">Astromart App Download</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script>
+      const searchBtn = document.getElementById('searchBtn');
+      const searchInput = document.getElementById('searchInput');
+      const searchCategory = document.getElementById('searchCategory');
+      const menuBtn = document.getElementById('menuBtn');
+      const navLinks = document.getElementById('navLinks');
+
+      searchBtn.addEventListener('click', () => {
+        const searchTerm = searchInput.value;
+        const category = searchCategory.value;
+        // Perform search logic here
+        console.log(`Searching for "${searchTerm}" in category "${category}"`);
+      });
+
+      menuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+      });
+    </script>
+</body>
+</html>
